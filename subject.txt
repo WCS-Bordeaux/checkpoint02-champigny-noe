@@ -138,20 +138,52 @@ qui seront affichés avec une boucle dans le template du component attaché à c
 Sinon tu peux aussi répondre en dessous de chaque question.
 
 a) Pourquoi utiliser $resource dans angular plutôt que $http ?
+    $http est compris dans $ressource
+
 b) C'est quoi la différence entre front-end et back-end en fait ?
+    Le front-end correspond à la partie "Navigateur", toute l'interface à  laquel l'utilisateur final à accès.
+    Le back-end correspond aux serveurs et aux services permettant de gerrer la base de donnée.
+
 c) Pourquoi je peux pas utiliser document.getElementById dans NodeJS ?
+    Car NodeJs est utilisé côté back-end, il n'interfère pas sur le contenu de la page HTML.
+
 d) Pourquoi c'est très grave d'utiliser document.getElementById dans AngularJS ?
+    Car AngularJs utilise Jquery et que Jquery est incompatible avec les getElementById (il utilise des querySelector)
+
 e) C'est quoi la différence entre NodeJS et Javascript ?
+    NodeJs a été créé à partir de JavaScript (Mais surtout du Moteur V8 de Google) et correspond à la partie Server de Javascript.
+
 f) En quoi c'est utile d'utiliser npm ?
+    NPM permet d'installer toutes les bibliothèques et dépendences permettant de faire fonctionner l'application. De plus lors d'un travail en équipe npm permet de transmettre aux autres utilisateurs l'ensemble des ces dépendences via le fichier package.json
+
 g) A quoi ça sert une base de donnée ? Et mongoDB ?
+    Une base de donnée permet de stocker toutes les informations que l'on retrouve dans l'application, tel que les utilisateurs ou les articles, et de les récupérer celles qui nous interesse lors de chaques chargement de page.
+    MongoDB est une technique de stockage de donnée.
+
 h) Est-il possible de faire des relations entre plusieurs collections ? Est-ce une bonne pratique ?
+    Oui il est possible de faire des relations entre plusieurs collections, cependant il est plutot conseiller d'utiliser des bases de données dites "SQL" lorsqu'on doit faire de nombreuses liaisons.
+
 i) C'est quoi un document dans mongoDB ? et une collection au final ?
+    Un document est un ensemble d'information tel que la liste de tous les utilisateurs.
+    Une collection correspond à l'ensemble des documents d'une base de donnée.
+
 j) Quelle serai la requête qui me permettrai d'aller chercher dans 
     ma db "toto" dans la collection "tata" l'utilisateur ayant pour nom "titi" ?
-k) Est-il plus important de sécuriser le client ou le serveur ? Pourquoi ?
-l) Pourquoi [1, 2, 3, () => "boom"][Number(true) + 2]() === "boom" ? Expliquez le plus précisément possible.
-m) Cite 3 directives angularjs.
+    db.tata.find({name="titi"})
 
+k) Est-il plus important de sécuriser le client ou le serveur ? Pourquoi ?
+    Il est plus important de sécuriser le serveur car c'est lui qui comprend l'ensemble du site, le client ne fait que venir chercher ce qui est contenue dans le serveur.
+
+l) Pourquoi [1, 2, 3, () => "boom"][Number(true) + 2]() === "boom" ? Expliquez le plus précisément possible.
+    Dans un premier temps on déclare le tableau [1, 2, 3, () => "boom"] dont la 4ème entrée correspond à une fonction dont le résultat est "boom".
+    Puis avec [Number(true) + 2] nous allons chercher l'entrée 3 (donc la 4ème position) du tableau. Number(true) vaut 1, +2 = 3.
+    () === "boom" est une comparaison, on demande si la fonction dans l'entrée ayant pour clé le nombre 3 vaut la chaine de charactère "boom". Ce qui est vrai. 
+    [1, 2, 3, () => "boom"][Number(true) + 2]() === "boom" Retourne donc true
+
+m) Cite 3 directives angularjs.
+    ng-repeat
+    ng-controller
+    ng-click
 
 
 *

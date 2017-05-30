@@ -1,1 +1,0 @@
-# checkpoint02-champigny-noe
