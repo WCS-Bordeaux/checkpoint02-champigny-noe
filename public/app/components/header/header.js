@@ -14,4 +14,5 @@ function Header() {
             displayName: 'Home'
         }
     ]
+    this.test = "testfrzefr"
 }
